@@ -1,0 +1,6 @@
+# Extending the system.site config form
+system.site:
+  mapping:
+    siteapikey:
+    type: string
+    label: 'Site API Key'

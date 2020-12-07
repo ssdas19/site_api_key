@@ -1,0 +1,14 @@
+site_api_key.node:
+  path: '/page_json/{site_api_key}/{node}'
+  defaults:
+    _controller: '\Drupal\site_api_key\Controller\SiteAPIKeyController::json_content'
+    _title: 'Hello World'
+  methods:  [GET]
+  requirements:
+    _custom_access_verify: 'TRUE'
+  options:
+    parameters:
+      site_api_key:
+        type: string
+      node:
+        type: entity:node

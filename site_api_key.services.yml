@@ -1,0 +1,10 @@
+services:
+  site_api_key.route_subscriber:
+    class: 'Drupal\site_api_key\Routing\SiteAPIKeyRouteSubscriber'
+    tags: 
+      - { name: event_subscriber }
+
+  site_api_key.node_access_checker:
+    class: Drupal\site_api_key\Access\NodeAccessCheck
+    tags:
+      - { name: access_check, applies_to: _custom_access_verify }
